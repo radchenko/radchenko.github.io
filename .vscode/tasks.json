@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Serve Website",
+			"type": "shell",
+			"command": "python -m http.server 8080",
+			"isBackground": true,
+			"problemMatcher": {
+				"pattern": {
+					"regexp": "Serving HTTP on .* port (\\d+)",
+					"line": 1
+				},
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "Serving HTTP on .* port \\d+",
+					"endsPattern": "Serving HTTP on .* port \\d+"
+				}
+			},
+			"presentation": {
+				"reveal": "silent",
+				"panel": "dedicated"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

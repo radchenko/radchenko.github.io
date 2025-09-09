@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Preview UI (Current File)",
+      "preLaunchTask": "Serve Website",
+      "url": "http://localhost:8080/${relativeFile}",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
