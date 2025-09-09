@@ -4,22 +4,30 @@
 		{
 			"label": "Serve Website",
 			"type": "shell",
-			"command": "python -m http.server 8080",
+			"command": "python",
+			"args": ["serve.py", "8080"],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
 			"isBackground": true,
 			"problemMatcher": {
 				"pattern": {
-					"regexp": "Serving HTTP on .* port (\\d+)",
+					"regexp": "Starting server on http://localhost:(\\d+)",
 					"line": 1
 				},
 				"background": {
 					"activeOnStart": true,
-					"beginsPattern": "Serving HTTP on .* port \\d+",
-					"endsPattern": "Serving HTTP on .* port \\d+"
+					"beginsPattern": "Starting server on http://localhost:\\d+",
+					"endsPattern": "Starting server on http://localhost:\\d+"
 				}
 			},
 			"presentation": {
-				"reveal": "silent",
-				"panel": "dedicated"
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": true,
+				"clear": true
 			},
 			"group": {
 				"kind": "build",
