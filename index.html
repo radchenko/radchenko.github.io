@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="auto">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,8 +15,7 @@
     <meta property="og:url" content="https://radchenko.github.io" />
     
     <!-- Theme and appearance -->
-    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#ffffff" id="theme-color" />
     <meta name="color-scheme" content="light dark" />
     
     <title>Oleg Radchenko — Software Engineer</title>
@@ -32,131 +31,74 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   </head>
   <body>
-    <a class="skip-link" href="#content">Skip to main content</a>
-    
-    <!-- Subtle loading indicator -->
-    <div class="loading-bar" aria-hidden="true"></div>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header" role="banner">
-      <div class="container">
-        <div class="header-content">
-          <div class="identity">
-            <h1 class="title">Oleg Radchenko</h1>
-            <p class="subtitle">Software Engineer</p>
-            <div class="focus-areas" aria-label="Areas of expertise">
-              <span class="tag">R&amp;D</span>
+    <div class="container">
+      <!-- Theme Switcher -->
+      <div class="theme-switcher">
+        <button class="theme-toggle" aria-label="Toggle theme" title="Switch theme">
+          <span class="theme-icon light-icon">☀️</span>
+          <span class="theme-icon dark-icon">🌙</span>
+        </button>
+      </div>
+
+      <!-- Business Card Layout -->
+      <div class="business-card">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+          <div class="contact-card">
+            <div class="contact-icon">💼</div>
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/oleg-radchenko-384923a2/" 
+               class="contact-link" 
+               rel="noopener" 
+               target="_blank"
+               aria-label="LinkedIn profile">
+              <span class="external-icon">↗</span>
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">⚡</div>
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/radchenko" 
+               class="contact-link" 
+               rel="noopener" 
+               target="_blank"
+               aria-label="GitHub profile">
+              <span class="external-icon">↗</span>
+            </a>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content">
+          <header class="profile-header">
+            <h1 class="profile-name">Oleg Radchenko</h1>
+            <p class="profile-title">Software Engineer</p>
+            
+            <div class="expertise-tags">
+              <span class="tag">R&D</span>
               <span class="tag">Systems</span>
               <span class="tag">Architecture</span>
             </div>
-          </div>
-          <nav class="primary-nav" aria-label="Main navigation" role="navigation">
-            <ul class="nav-list">
-              <li><a href="#about" class="nav-link">About</a></li>
-              <li><a href="#work" class="nav-link">Work</a></li>
-              <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+          </header>
 
-    <main id="content" class="site-main" role="main">
-      <div class="container">
-        <section id="about" class="section" aria-labelledby="about-heading">
-          <h2 id="about-heading" class="section-title">About</h2>
-          <div class="section-content">
-            <p class="lead">
-              I focus on building reliable systems and pragmatic architectures. 
-              My work centers on R&amp;D, system design, and creating simple solutions 
-              to complex technical challenges.
+          <section class="profile-description">
+            <p>
+              I focus on building reliable systems and pragmatic architectures. My 
+              work centers on R&D, system design, and creating simple solutions to 
+              complex technical challenges.
             </p>
-            <div class="principles">
-              <div class="principle">
-                <h3>Reliability</h3>
-                <p>Systems that work consistently under real-world conditions</p>
-              </div>
-              <div class="principle">
-                <h3>Clarity</h3>
-                <p>Clean code and clear architectural decisions</p>
-              </div>
-              <div class="principle">
-                <h3>Pragmatism</h3>
-                <p>Right tool for the job, avoiding over-engineering</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="work" class="section" aria-labelledby="work-heading">
-          <h2 id="work-heading" class="section-title">Work</h2>
-          <div class="section-content">
-            <div class="work-grid">
-              <div class="work-item">
-                <h3>Open Source</h3>
-                <p>Contributing to projects and maintaining repositories</p>
-                <a href="https://github.com/radchenko" class="work-link" rel="noopener" target="_blank">
-                  View on GitHub
-                  <span class="external-icon" aria-hidden="true">↗</span>
-                </a>
-              </div>
-              <div class="work-item">
-                <h3>Research & Development</h3>
-                <p>Exploring new technologies and architectural patterns</p>
-              </div>
-              <div class="work-item">
-                <h3>System Architecture</h3>
-                <p>Designing scalable and maintainable software systems</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" class="section" aria-labelledby="contact-heading">
-          <h2 id="contact-heading" class="section-title">Contact</h2>
-          <div class="section-content">
-            <div class="contact-grid">
-              <a href="https://www.linkedin.com/in/oleg-radchenko-384923a2/" 
-                 class="contact-link" 
-                 rel="noopener" 
-                 target="_blank"
-                 aria-label="LinkedIn profile">
-                <span class="contact-icon">💼</span>
-                <span class="contact-text">LinkedIn</span>
-                <span class="external-icon" aria-hidden="true">↗</span>
-              </a>
-              <a href="https://github.com/radchenko" 
-                 class="contact-link" 
-                 rel="noopener" 
-                 target="_blank"
-                 aria-label="GitHub profile">
-                <span class="contact-icon">⚡</span>
-                <span class="contact-text">GitHub</span>
-                <span class="external-icon" aria-hidden="true">↗</span>
-              </a>
-              <a href="mailto:radchenko.oleg.ua@gmail.com" 
-                 class="contact-link"
-                 aria-label="Send email">
-                <span class="contact-icon">✉️</span>
-                <span class="contact-text">Email</span>
-              </a>
-            </div>
-          </div>
-        </section>
+          </section>
+        </main>
       </div>
-    </main>
 
-    <footer class="site-footer" role="contentinfo">
-      <div class="container">
-        <div class="footer-content">
-          <p class="copyright">&copy; <span class="current-year">2025</span> Oleg Radchenko</p>
-          <div class="footer-meta">
-            <span class="build-info">Built with care</span>
-            <span class="separator">•</span>
-            <span class="tech-stack">HTML, CSS, JS</span>
-          </div>
-        </div>
-      </div>
-    </footer>
+      <!-- Footer -->
+      <footer class="page-footer">
+        <p>&copy; <span class="current-year">2025</span> Oleg Radchenko</p>
+      </footer>
+    </div>
 
     <script src="assets/js/main.js" defer></script>
   </body>
