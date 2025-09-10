@@ -18,4 +18,3 @@ Minimal personal landing page hosted on GitHub Pages.
 ## Notes
 
 - No build step; static files only.
-- Keep content lean: focus on technical interests and projects.
